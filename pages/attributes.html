@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Atributos</title>
+        <link
+            rel="stylesheet"
+            href="../styles.css"
+        />
+    </head>
+    <header>
+        <nav class="nav">
+            <a href="../index.html">Início</a>
+            <a href="creation_menu.html">Criar Personagem</a>
+            <a href="attributes.html" class="selected">Atributos</a>
+            <a href="gallery.html">Galeria</a>
+            <a href="credits.html">Créditos</a>
+        </nav>
+    </header>
+    <body>
+        <div class="con">
+            <form>
+                <label>Insira seu nome</label>
+                <input
+                    type="text"
+                    placeholder="Nome"
+                    id="inputName"
+                    class="input"
+                />
+                <label>Insira sua idade</label>
+
+                <input
+                    type="number"
+                    placeholder="Idade"
+                    id="inputAge"
+                    class="input"
+                />
+                <button onclick="getForm(event)">Enviar</button>
+            </form>
+        </div>
+    </body>
+</html>

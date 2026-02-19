@@ -1,0 +1,277 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Mono", monospace;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #1f198b, #4f46e5);
+    background: linear-gradient(180deg, #000, #101030);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #1f2933;
+}
+
+header {
+    width: 100%;
+    position: absolute;
+    top: 20px;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.nav {
+    display: flex;
+    gap: 24px;
+    padding: 12px 24px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav a {
+    position: relative;
+    color: #fafafa;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 6px 10px;
+    transition: 0.3s;
+}
+.nav
+
+.nav a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #c7d2fe;
+    transition: 0.3s;
+    transform: translateX(-50%);
+}
+
+.nav a:hover {
+    color: #c7d2fe;
+}
+
+.nav a:hover::after {
+    width: 100%;
+}
+
+.nav a.selected {
+    color: #c7d2fe;
+    text-shadow: 0px 2px 5px #fff ;
+}
+
+
+h1 {
+    color: #fafafa;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-size: 2.2rem;
+    text-align: center;
+    text-shadow: 5px 5px 5px #000;
+}
+
+.position {
+    display: flex;
+    gap: 24px;
+}
+
+.position > div:first-child {
+    flex: 1;
+}
+
+.position > div:last-child {
+    flex: 2;
+}
+
+.container {
+    margin-bottom: 20px;
+    background-color: #fafafa;
+    padding: 24px 32px;
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    box-shadow: 0px 10px 25px #000;
+    line-height: 1.6;
+    font-size: 1.1rem;
+}
+
+h3 {
+    margin-bottom: 16px;
+    color: #1f198b;
+    text-align: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 5px #4f46e5;
+}
+
+/* textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    resize: none;
+    margin-bottom: 10px;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #4f46e5;
+    box-shadow: 0 0 5px #4f46e5;
+} */
+
+button {
+    margin-top: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #4f46e5;
+    color: #fafafa;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #3730a3;
+    transform: scale(1.03);
+}
+
+p {
+    background-color: #4f46e5;
+    height: 3rem;
+    margin-top: 12px;
+    font-weight: bold;
+    color: #fff;
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    transition: 1s linear;
+}
+.pixel-art {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+/* Container das Camadas (Preview do Personagem) */
+.character-preview {
+    position: relative;
+    width: 320px;
+    height: 320px;
+    margin: 0 auto 24px auto;
+    border-radius: 12px;
+    border: 3px solid #4f46e5;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.layer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centraliza perfeitamente as camadas */
+    width: 100%;
+    height: auto;
+}
+
+/* Grid de Opções (Pele, Cabeça, Roupa) */
+.options-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.section h4 {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    color: #4f46e5;
+    letter-spacing: 1px;
+    margin-bottom: 8px;
+    border-left: 4px solid #4f46e5;
+    padding-left: 8px;
+}
+
+/* Estilização das Miniaturas (Thumbs) */
+.thumb-container {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    background: #f1f5f9;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.thumb {
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    border: 2px solid #cbd5e1;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    image-rendering: pixelated;
+}
+
+.thumb:hover {
+    border-color: #4f46e5;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 10px rgba(79, 70, 229, 0.2);
+}
+
+.thumb:active {
+    transform: scale(0.95);
+}
+
+/* Ajuste no Input de Texto para combinar com o resto */
+#input-name {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-family: inherit;
+    margin-bottom: 5px;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border-top: 1px solid #eee;
+    padding-top: 15px;
+}

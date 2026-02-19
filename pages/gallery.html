@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="../styles.css"
+        />
+        <link
+            rel="stylesheet"
+            href="gallery.css"
+        />
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <a href="../index.html">Início</a>
+                <a href="creation_menu.html">Criar Personagem</a>
+                <a href="attributes.html">Atributos</a>
+                <a href="gallery.html" class="selected">Galeria</a>
+                <a href="credits.html">Créditos</a>
+            </nav>
+        </header>
+
+        <div
+            class="container second-container"
+            style="max-width: 800px"
+        >
+            <h2>Galeria de Personagens</h2>
+
+            <div
+                id="empty-gallery"
+                style="display: none; text-align: center; padding: 20px"
+            >
+                <p>Você ainda não salvou nenhum herói.</p>
+            </div>
+
+            <table class="characters-table">
+                <thead>
+                    <tr>
+                        <th>Miniatura</th>
+                        <th>Nome</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+            </table>
+
+            <button
+                onclick="limparGaleria()"
+                style="background-color: #ef4444; margin-top: 20px"
+            >
+                Apagar Galeria
+            </button>
+        </div>
+    </body>
+    <script src="./gallery.js"></script>
+</html>

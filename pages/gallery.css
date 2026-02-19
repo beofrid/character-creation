@@ -1,0 +1,38 @@
+.characters-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.characters-table th {
+    background-color: #4f46e5;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+.characters-table td {
+    padding: 12px;
+    border-bottom: 1px solid #eee;
+    vertical-align: middle;
+}
+
+.mini-preview {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.mini-layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    image-rendering: pixelated;
+}
