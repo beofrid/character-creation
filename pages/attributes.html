@@ -1,46 +1,61 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1.0"
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Atributos</title>
+    <link rel="stylesheet" href="../styles.css" />
+    <link rel="stylesheet" href="./attributes.css" />
+  </head>
+  <header>
+    <nav class="nav">
+      <a href="../index.html">Início</a>
+      <a href="creation_menu.html">Criar Personagem</a>
+      <a href="attributes.html" class="selected">Atributos</a>
+      <a href="gallery.html">Galeria</a>
+      <a href="credits.html">Créditos</a>
+    </nav>
+  </header>
+  <body>
+    <div class="container">
+      <form>
+        <label>Selecione o personagem</label>
+        <select id="character-select"></select>
+        <label>Insira o poder do personagem</label>
+        <input
+          type="text"
+          placeholder="Poder do personagem"
+          id="inputSlogan"
+          class="input"
         />
-        <title>Atributos</title>
-        <link
-            rel="stylesheet"
-            href="../styles.css"
-        />
-    </head>
-    <header>
-        <nav class="nav">
-            <a href="../index.html">Início</a>
-            <a href="creation_menu.html">Criar Personagem</a>
-            <a href="attributes.html" class="selected">Atributos</a>
-            <a href="gallery.html">Galeria</a>
-            <a href="credits.html">Créditos</a>
-        </nav>
-    </header>
-    <body>
-        <div class="con">
-            <form>
-                <label>Insira seu nome</label>
-                <input
-                    type="text"
-                    placeholder="Nome"
-                    id="inputName"
-                    class="input"
-                />
-                <label>Insira sua idade</label>
+        <label>Insira a idade do personagem</label>
+        <input type="number" placeholder="Idade" id="inputAge" class="input" />
 
-                <input
-                    type="number"
-                    placeholder="Idade"
-                    id="inputAge"
-                    class="input"
-                />
-                <button onclick="getForm(event)">Enviar</button>
-            </form>
-        </div>
-    </body>
+        <label> <span id="strenght">0</span> Força</label>
+        <input type="range" id="strenghtRange" min="1" max="5" step="1" value="1" />
+
+        <label><span id="erudition">0</span> Erudição</label>
+        <input type="range" id="eruditionRange" min="1" max="5" step="1" value="1" />
+
+        <label><span id="astuteness">0</span> Astúcia</label>
+        <input type="range" id="astutenessRange" min="1" max="5" step="1" value="1" />
+
+        <label><span id="resilience">0</span> Resiliência</label>
+        <input type="range" id="resilienceRange" min="1" max="5" step="1" value="1" />
+        
+
+        <button type="button" onclick="saveAttributes()">Salvar atributos</button>
+      </form>
+    </div>
+  </body>
+  <script src="/scripts/attributes.js"></script>
 </html>
+
+<!-- Criação de uma página com formulário contendo, no mínimo:
+
+    Três campos (input, select e/ou textarea)
+    Um botão 
+
+    Validação do formulário onde todos os campos são obrigatórios e, ao menos um campo, tem que ter ao menos 3 caracteres.
+
+Critério de avaliação: 1 ponto para validação de campos obrigatórios e o outro para o número mínimo de caracteres. -->
