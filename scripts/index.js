@@ -100,7 +100,7 @@ const selectHome = document.getElementById("character-select-home");
 
 function resolvePath(path) {
   if (path.startsWith("../")) {
-    return path.replace("../", "/");
+    return path.replace("../", "./");
   }
   return path;
 }
