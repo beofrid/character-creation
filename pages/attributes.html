@@ -1,54 +1,105 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Atributos</title>
-    <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="./attributes.css" />
-  </head>
-  <header>
-    <nav class="nav">
-      <a href="../index.html">Início</a>
-      <a href="creation_menu.html">Criar Personagem</a>
-      <a href="attributes.html" class="selected">Atributos</a>
-      <a href="gallery.html">Galeria</a>
-      <a href="credits.html">Créditos</a>
-    </nav>
-  </header>
-  <body>
-    <div class="container">
-      <form>
-        <label>Selecione o personagem</label>
-        <select id="character-select"></select>
-        <label>Insira o poder do personagem</label>
-        <input
-          type="text"
-          placeholder="Poder do personagem"
-          id="inputSlogan"
-          class="input"
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
         />
-        <label>Insira a idade do personagem</label>
-        <input type="number" placeholder="Idade" id="inputAge" class="input" />
+        <title>Atributos</title>
+        <link
+            rel="stylesheet"
+            href="../styles.css"
+        />
+        <link
+            rel="stylesheet"
+            href="./attributes.css"
+        />
+    </head>
+    <header>
+        <nav class="nav">
+            <a href="../index.html">Início</a>
+            <a href="creation_menu.html">Criar Personagem</a>
+            <a
+                href="attributes.html"
+                class="selected"
+                >Atributos</a
+            >
+            <a href="gallery.html">Galeria</a>
+            <a href="credits.html">Créditos</a>
+        </nav>
+    </header>
 
-        <label> <span id="strenght">0</span> Força</label>
-        <input type="range" id="strenghtRange" min="1" max="5" step="1" value="1" />
+    <body>
+        <div class="container margin-top">
+            <form>
+                <label>Selecione o personagem</label>
+                <select id="character-select"></select>
+                <label>Insira o poder do personagem</label>
+                <input
+                    type="text"
+                    placeholder="Poder do personagem"
+                    id="inputPower"
+                    class="input"
+                />
+                <label>Insira a idade do personagem</label>
+                <input
+                    type="number"
+                    placeholder="Idade"
+                    id="inputAge"
+                    class="input"
+                />
 
-        <label><span id="erudition">0</span> Erudição</label>
-        <input type="range" id="eruditionRange" min="1" max="5" step="1" value="1" />
+                <label> <span id="strenght">0</span> Força</label>
+                <input
+                    type="range"
+                    id="strenghtRange"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="1"
+                />
 
-        <label><span id="astuteness">0</span> Astúcia</label>
-        <input type="range" id="astutenessRange" min="1" max="5" step="1" value="1" />
+                <label><span id="erudition">0</span> Erudição</label>
+                <input
+                    type="range"
+                    id="eruditionRange"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="1"
+                />
 
-        <label><span id="resilience">0</span> Resiliência</label>
-        <input type="range" id="resilienceRange" min="1" max="5" step="1" value="1" />
-        
+                <label><span id="astuteness">0</span> Astúcia</label>
+                <input
+                    type="range"
+                    id="astutenessRange"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="1"
+                />
 
-        <button type="button" onclick="saveAttributes()">Salvar atributos</button>
-      </form>
-    </div>
-  </body>
-  <script src="../scripts/attributes.js"></script>
+                <label><span id="resilience">0</span> Resiliência</label>
+                <input
+                    type="range"
+                    id="resilienceRange"
+                    min="1"
+                    max="5"
+                    step="1"
+                    value="1"
+                />
+
+                <button
+                    type="button"
+                    onclick="inputValidation()"
+                >
+                    Salvar atributos
+                </button>
+            </form>
+        </div>
+    </body>
+    <script src="../scripts/attributes.js"></script>
 </html>
 
 <!-- Criação de uma página com formulário contendo, no mínimo:

@@ -6,18 +6,13 @@
 }
 
 .github-card {
-    background: rgba(
-        255,
-        255,
-        255,
-        0.95
-    ); /* Quase branco, mas com leve transparência */
+    background: rgba(255, 255, 255, 0.95);
     border-radius: 16px;
     padding: 30px;
     width: 100%;
     max-width: 400px;
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    border: 2px solid #4f46e5; /* Cor principal do seu site */
+    border: 2px solid #4f46e5;
     text-align: center;
     transition: transform 0.3s ease;
 }
@@ -49,12 +44,12 @@
 }
 
 .github-bio {
-    background: #f1f5f9 !important; /* Sobrescrevendo seu estilo de <p> global se necessário */
-    color: #475569 !important;
+    background: #d9d2f0 !important;
     padding: 12px !important;
+    color: #475569 !important;
     border-radius: 8px;
     font-size: 0.9rem !important;
-    height: auto !important; /* Para não herdar os 3rem do seu CSS global */
+    height: auto !important;
     margin-bottom: 20px;
 }
 

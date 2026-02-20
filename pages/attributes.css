@@ -1,48 +1,44 @@
 input[type="range"] {
-  -webkit-appearance: none;
-  width: 200px;
-  height: 8px;
-  border-radius: 10px;
-  background: linear-gradient(to right, #4ade80, #22c55e);
-  outline: none;
+    -webkit-appearance: none;
+    width: 200px;
+    height: 8px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #4ade80, #22c55e);
+    outline: none;
 }
 
-/* trilho (Chrome/Safari) */
 input[type="range"]::-webkit-slider-runnable-track {
-  height: 12px;
-  border-radius: 10px;
+    height: 12px;
+    border-radius: 10px;
 }
 
-/* bolinha */
 input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  height: 12px;
-  width: 12px;
-  border-radius: 0%;
-  background: #fff;
-  border: 2px solid #22c55e;
-  cursor: pointer;
-  transition: 0.2s;
+    -webkit-appearance: none;
+    height: 12px;
+    width: 12px;
+    border-radius: 0%;
+    background: #fff;
+    border: 2px solid #22c55e;
+    cursor: pointer;
+    transition: 0.2s;
 }
 
-/* hover na bolinha */
 input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.2);
-  background: #dcfce7;
+    transform: scale(1.2);
+    background: #dcfce7;
 }
 
-/* Firefox */
 input[type="range"]::-moz-range-track {
-  height: 12px;
-  background: #22c55e;
-  border-radius: 10px;
+    height: 12px;
+    background: #22c55e;
+    border-radius: 10px;
 }
 
 input[type="range"]::-moz-range-thumb {
-  height: 12px;
-  width: 12px;
-  border-radius: 0%;
-  background: #fff;
-  border: 2px solid #22c55e;
-  cursor: pointer;
+    height: 12px;
+    width: 12px;
+    border-radius: 0%;
+    background: #fff;
+    border: 2px solid #22c55e;
+    cursor: pointer;
 }

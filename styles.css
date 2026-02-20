@@ -7,7 +7,7 @@
 
 body {
     min-height: 100vh;
-    background: linear-gradient(180deg, #1f198b, #4f46e5);
+    /* background: linear-gradient(180deg, #1f198b, #4f46e5); */
     background: linear-gradient(180deg, #000, #101030);
 
     display: flex;
@@ -15,12 +15,21 @@ body {
     align-items: center;
     justify-content: center;
     color: #1f2933;
+    gap: 1rem;
+    /* justify-content: center;  */
+    justify-content: flex-start;
+    padding-bottom: 50px;
+}
+
+.margin-top {
+    margin-top: 4rem;
 }
 
 header {
     width: 100%;
-    position: absolute;
-    top: 20px;
+    position: sticky;
+    top: 0;
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     z-index: 1000;
@@ -41,11 +50,11 @@ header {
     position: relative;
     color: #fafafa;
     text-decoration: none;
+    text-shadow: #000 1px 1px 3px;
     font-weight: 500;
     padding: 6px 10px;
     transition: 0.3s;
 }
-.nav
 
 .nav a::after {
     content: "";
@@ -69,13 +78,11 @@ header {
 
 .nav a.selected {
     color: #c7d2fe;
-    text-shadow: 0px 2px 5px #fff ;
+    text-shadow: 0px 2px 5px #000;
 }
-
 
 h1 {
     color: #fafafa;
-    margin-top: 24px;
     margin-bottom: 24px;
     font-size: 2.2rem;
     text-align: center;
@@ -137,22 +144,6 @@ label {
     box-shadow: 0 0 5px #4f46e5;
 }
 
-/* textarea {
-    width: 100%;
-    min-height: 100px;
-    padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    resize: none;
-    margin-bottom: 10px;
-    outline: none;
-}
-
-textarea:focus {
-    border-color: #4f46e5;
-    box-shadow: 0 0 5px #4f46e5;
-} */
-
 button {
     margin-top: 10px;
     padding: 10px;
@@ -186,7 +177,6 @@ p {
     image-rendering: crisp-edges;
 }
 
-/* Container das Camadas (Preview do Personagem) */
 .character-preview {
     position: relative;
     width: 320px;
@@ -205,12 +195,11 @@ p {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Centraliza perfeitamente as camadas */
+    transform: translate(-50%, -50%);
     width: 100%;
     height: auto;
 }
 
-/* Grid de Opções (Pele, Cabeça, Roupa) */
 .options-grid {
     display: flex;
     flex-direction: column;
@@ -228,7 +217,6 @@ p {
     padding-left: 8px;
 }
 
-/* Estilização das Miniaturas (Thumbs) */
 .thumb-container {
     display: flex;
     gap: 10px;
@@ -259,7 +247,6 @@ p {
     transform: scale(0.95);
 }
 
-/* Ajuste no Input de Texto para combinar com o resto */
 #input-name {
     padding: 10px;
     border-radius: 8px;
@@ -278,6 +265,8 @@ p {
 
 .info-box {
     background: #f1f5f9;
+    height: 4rem;
+    width: 16rem;
     padding: 8px;
     border-radius: 6px;
     font-size: 0.9rem;

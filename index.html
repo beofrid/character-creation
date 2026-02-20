@@ -1,76 +1,121 @@
 <!doctype html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Crie seu personagem</title>
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <header>
-      <nav class="nav">
-        <a href="index.html" class="selected">Início</a>
-        <a href="./pages/creation_menu.html">Criar Personagem</a>
-        <a href="./pages/attributes.html">Atributos</a>
-        <a href="./pages/gallery.html">Galeria</a>
-        <a href="./pages/credits.html">Créditos</a>
-      </nav>
-    </header>
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+        />
+        <title>Crie seu personagem</title>
+        <link
+            rel="stylesheet"
+            href="styles.css"
+        />
+    </head>
+    <body>
+        <header>
+            <nav class="nav">
+                <a
+                    href="index.html"
+                    class="selected"
+                    >Início</a
+                >
+                <a href="./pages/creation_menu.html">Criar Personagem</a>
+                <a href="./pages/attributes.html">Atributos</a>
+                <a href="./pages/gallery.html">Galeria</a>
+                <a href="./pages/credits.html">Créditos</a>
+            </nav>
+        </header>
 
-    <h1>Crie seu personagem</h1>
-    <div class="position">
-      <div class="container">
-        <h3><p id="pElement">Personagem sem nome</p></h3>
-        <div class="character-preview" id="characterPreview">
-          <img src="./assets/skin-1.png" id="skin" class="pixel-art layer" />
-          <img src="./assets/standard.png" id="head" class="pixel-art layer" />
-          <img
-            src="./assets/standard.png"
-            id="clothes"
-            class="pixel-art layer"
-          />
+        <h1>Ficha de Personagens</h1>
+        <div class="position">
+            <div class="container">
+                <h3><p id="pElement">Personagem sem nome</p></h3>
+                <div
+                    class="character-preview"
+                    id="characterPreview"
+                >
+                    <img
+                        src="./assets/skin-1.png"
+                        id="skin"
+                        class="pixel-art layer"
+                    />
+                    <img
+                        src="./assets/standard.png"
+                        id="head"
+                        class="pixel-art layer"
+                    />
+                    <img
+                        src="./assets/standard.png"
+                        id="clothes"
+                        class="pixel-art layer"
+                    />
+                </div>
+            </div>
+
+            <div class="container">
+                <div class="container">
+                    <h3>Selecionar Personagem</h3>
+
+                    <select
+                        id="character-select-home"
+                        class="input"
+                    ></select>
+
+                    <div class="controls">
+                        <label>Poder</label>
+                        <div
+                            id="char-power"
+                            class="info-box"
+                        >
+                            -
+                        </div>
+
+                        <label>Idade</label>
+                        <div
+                            id="char-age"
+                            class="info-box"
+                        >
+                            -
+                        </div>
+                    </div>
+                    <div class="stats-container">
+                        <div class="stat">
+                            <span>Força</span>
+                            <div class="bar"><div id="bar-strength"></div></div>
+                        </div>
+
+                        <div class="stat">
+                            <span>Erudição</span>
+                            <div class="bar">
+                                <div id="bar-erudition"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat">
+                            <span>Astúcia</span>
+                            <div class="bar">
+                                <div id="bar-astuteness"></div>
+                            </div>
+                        </div>
+
+                        <div class="stat">
+                            <span>Resiliência</span>
+                            <div class="bar">
+                                <div id="bar-resilience"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
 
-      <div class="container">
         <div class="container">
-          <h3>Selecionar Personagem</h3>
-
-          <select id="character-select-home" class="input"></select>
-
-          <div class="controls">
-            <label>Poder</label>
-            <div id="char-power" class="info-box">-</div>
-
-            <label>Idade</label>
-            <div id="char-age" class="info-box">-</div>
-          </div>
-
-          <div class="stats-container">
-            <div class="stat">
-              <span>Força</span>
-              <div class="bar"><div id="bar-strength"></div></div>
-            </div>
-
-            <div class="stat">
-              <span>Erudição</span>
-              <div class="bar"><div id="bar-erudition"></div></div>
-            </div>
-
-            <div class="stat">
-              <span>Astúcia</span>
-              <div class="bar"><div id="bar-astuteness"></div></div>
-            </div>
-
-            <div class="stat">
-              <span>Resiliência</span>
-              <div class="bar"><div id="bar-resilience"></div></div>
-            </div>
-          </div>
+            Desenvolvido por:
+            <p><strong>Bruno Medeiros Dias</strong></p>
+            Polo IFSUL São Francisco de Paula
         </div>
-      </div>
-    </div>
-  </body>
+    </body>
 
-  <script src="scripts/index.js"></script>
+    <script src="scripts/index.js"></script>
 </html>

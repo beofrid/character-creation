@@ -3,7 +3,6 @@ function loadCharacters() {
     const tableBody = document.getElementById("tableBody");
     const emptyWarning = document.getElementById("empty-gallery");
 
-    // Limpa a tabela antes de carregar
     tableBody.innerHTML = "";
 
     if (list.length === 0) {
@@ -35,8 +34,8 @@ function loadCharacters() {
 }
 
 function excluirHeroi(index) {
-    if (confirm("Tem certeza que deseja apagar todos os heróis?")) {
-        localStorage.removeItem("meusPersonagens");
+    if (confirm("Tem certeza que deseja apagar esse personagem?")) {
+        localStorage.removeItem("character");
         let list = JSON.parse(localStorage.getItem("charactersDefault")) || [];
         list.splice(index, 1);
         localStorage.setItem("charactersDefault", JSON.stringify(list));
@@ -44,12 +43,4 @@ function excluirHeroi(index) {
     }
 }
 
-function limparGaleria() {
-    if (confirm("Tem certeza que deseja apagar todos os heróis?")) {
-        localStorage.removeItem("meusPersonagens");
-        loadCharacters();
-    }
-}
-
-// Inicializa ao carregar a página
 window.onload = loadCharacters();
