@@ -10,9 +10,9 @@ function seedCharacters() {
     {
       id: Date.now() + 1,
       name: "Disco Man",
-      skin: "/assets/skin-2.png",
-      head: "/assets/head-4.png",
-      clothes: "/assets/clothes-4.png",
+      skin: "../assets/skin-2.png",
+      head: "../assets/head-4.png",
+      clothes: "../assets/clothes-4.png",
       power: "Dança sem parar e bate palma fora do ritmo",
       age: 35,
       stats: {
@@ -25,9 +25,9 @@ function seedCharacters() {
     {
       id: Date.now() + 2,
       name: "C Jay",
-      skin: "/assets/skin-2.png",
-      head: "/assets/head-1.png",
-      clothes: "/assets/clothes-1.png",
+      skin: "../assets/skin-2.png",
+      head: "../assets/head-1.png",
+      clothes: "../assets/clothes-1.png",
       power: "Conhecem ele como um grande ladrão de carros",
       age: 35,
       stats: {
@@ -40,9 +40,9 @@ function seedCharacters() {
     {
       id: Date.now() + 3,
       name: "Super-heroi Lhego",
-      skin: "/assets/skin-1.png",
-      head: "/assets/head-6.png",
-      clothes: "/assets/clothes-3.png",
+      skin: "../assets/skin-1.png",
+      head: "../assets/head-6.png",
+      clothes: "../assets/clothes-3.png",
       power: "É desmontável",
       age: 93,
       stats: {
@@ -55,9 +55,9 @@ function seedCharacters() {
     {
       id: Date.now() + 4,
       name: "Dion Uatison",
-      skin: "/assets/skin-3.png",
-      head: "/assets/head-7.png",
-      clothes: "/assets/clothes-6.png",
+      skin: "../assets/skin-3.png",
+      head: "../assets/head-7.png",
+      clothes: "../assets/clothes-6.png",
       power: "Elementar, meu caro.",
       age: 25,
       stats: {
@@ -70,9 +70,9 @@ function seedCharacters() {
     {
       id: Date.now() + 5,
       name: "Personagem genérico",
-      skin: "/assets/skin-1.png",
-      head: "/assets/standard.png",
-      clothes: "/assets/standard.png",
+      skin: "../assets/skin-1.png",
+      head: "../assets/standard.png",
+      clothes: "../assets/standard.png",
       power: "Ih, esse não tem nada",
       age: 0,
       stats: {
@@ -90,52 +90,6 @@ function seedCharacters() {
 }
 window.onload = seedCharacters();
 
-
-
-// const selectCharacter = document.getElementById("character-select-home");
-
-// function loadCharacterHome() {
-//   const savedData = localStorage.getItem("charactersDefault");
-
-//   if (!savedData) return;
-
-//   const list = JSON.parse(savedData);
-//   if (!Array.isArray(list)) return;
-
-//   const defaultOption = document.createElement("option");
-//   defaultOption.value = "";
-//   defaultOption.textContent = "Selecione o personagem";
-//   defaultOption.disabled = true;
-//   defaultOption.selected = true;
-//   selectCharacter.appendChild(defaultOption);
-
-//   list.forEach((character) => {
-//     const option = document.createElement("option");
-//     option.value = character.id;
-//     option.textContent = character.name;
-//     selectCharacter.appendChild(option);
-//   });
-
-// }
-// document.addEventListener("DOMContentLoaded", loadCharacterHome);
-
-// function loadSelectedCharacterHome() {
-//   const selectCharacter = document.getElementById("character-select-home");
-//   const list = JSON.parse(localStorage.getItem("charactersDefault")) || [];
-
-//   if (!selectCharacter.value) return;
-
-//   const selected = list.find((c) => c.id == selectCharacter.value);
-//   if (!selected) return;
-
-//   const nameElement = document.getElementById("input-name");
-//   if (nameElement) nameElement.value = selected.name;
-
-//   document.getElementById("skin").src = selected.skin;
-//   document.getElementById("head").src = selected.head;
-//   document.getElementById("clothes").src = selected.clothes;
-// }
-// selectCharacter.addEventListener("change", loadSelectedCharacterHome);
 
 function updateBar(id, value) {
   const percent = (value / 5) * 100;
